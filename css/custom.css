@@ -215,3 +215,9 @@ footer {
 footer p {
     font-size: 14px;
 }
+
+@media (max-width: 768px) {
+    #ready-to-take .flex-img, #here-to-help .flex-img {
+        height: 340px;
+    }
+}
