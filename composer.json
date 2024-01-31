@@ -1,1 +1,5 @@
-'{}'
+{
+    "name": "kaplinski/elementiausa",
+    "description": "Elementia usa",
+    "require": {}
+}
