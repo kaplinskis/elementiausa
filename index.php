@@ -271,7 +271,7 @@
 
                                 $body = "Name: " . $name . "\n Last name: " . $last_name . "\n Email: " . $email . "\n Company: " . $company . "\n Message: " . $message;
                                 $mail->setFrom('it@investorcloud.net', 'no-reply'); // Cambia esto a tu dirección y nombre de remitente
-                                $mail->addAddress('david.roman@irstrat.com', 'IT'); // Cambia esto a la dirección y nombre del destinatario
+                                $mail->addAddress('it@kaplinski.ca', 'IT'); // Cambia esto a la dirección y nombre del destinatario
                                 $mail->Subject = 'Usuario annimo desea contactar con elementia USA';
                                 $mail->Body    = $body;
                                 // Enviar el correo electrónico
