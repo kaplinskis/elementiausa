@@ -250,13 +250,13 @@
                         $email = htmlspecialchars(stripslashes($emailSanitized));
                         $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
 
-                        if (!preg_match("/^[A-Za-z .'-]+$/", $name)) {
+                        if (!preg_match("/^[A-Za-zñÑáéíóúÁÉÍÓÚ.-]+(?:[-\s][A-Za-zñÑáéíóúÁÉÍÓÚ.-]+)*$/", $name)) {
                             $error['name'] = 'Invalid name';
                         }
-                        if (!preg_match("/^[A-Za-z .'-]+$/", $last_name)) {
+                        if (!preg_match("/^[A-Za-zñÑáéíóúÁÉÍÓÚ.-]+(?:[-\s][A-Za-zñÑáéíóúÁÉÍÓÚ.-]+)*$/", $last_name)) {
                             $error['last_name'] = 'Invalid last name';
                         }
-                        if (!preg_match("/^[A-Za-z .'-]+$/", $company)) {
+                        if (!preg_match("/[A-Za-zñÑáéíóúÁÉÍÓÚ.-]+(?:[-\s][A-Za-zñÑáéíóúÁÉÍÓÚ.-]+)*$/", $company)) {
                             $error['company'] = 'Invalid company';
                         }
                         if (!preg_match("/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/", $email)) {
@@ -269,11 +269,13 @@
                         if (empty($error)) {
                             try {
 
-                                $body = "Name: " . $name . "\n Last name: " . $last_name . "\n Email: " . $email . "\n Company: " . $company . "\n Message: " . $message;
+                                $body_text = "Name: " . $name . "\r\n Last name: " . $last_name . "\r\n Email: " . $email . "\r\n Company: " . $company . "\r\n Message: " . $message;
+                                $bodyhtml = "Name: " . $name . "<br>Last name: " . $last_name . "<br> Email: " . $email . "<br> Company: " . $company . "<br> Message: " . $message;
                                 $mail->setFrom('it@investorcloud.net', 'no-reply'); // Cambia esto a tu dirección y nombre de remitente
                                 $mail->addAddress('it@kaplinski.ca', 'IT'); // Cambia esto a la dirección y nombre del destinatario
                                 $mail->Subject = 'Usuario annimo desea contactar con elementia USA';
-                                $mail->Body    = $body;
+                                $mail->Body    = $bodyhtml;
+                                $mail->AltBody    = $body_text;
                                 // Enviar el correo electrónico
                                 $mail->send();
                                 echo '<p style="color: green">Message sent</p>';
