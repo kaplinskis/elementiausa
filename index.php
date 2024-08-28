@@ -70,20 +70,20 @@
                     <h4 class="text-center text-uppercase">A DIVISION OF ELEMENTIA</h4>
                     <h5 class="text-center fw-bold mb-4">Meet the companies</h5>
                     <div class="d-flex justify-content-center align-items-center flex-wrap">
-                        <a href="#" class="p-3 mb-1">
+                        <a href="https://allurausa.com/" class="p-3 mb-1">
                             <img width="150px" src="img/logos/Allura.png" alt="Allura">
                         </a>
-                        <a href="#" class="p-3 mb-1">
-                            <img width="150px" src="img/logos/Giant-Cement.png" alt="Giant-Cement">
+                        <a href="https://www.giantcement.com/" class="p-3 mb-1">
+                            <img width="150px" src="img/logos/1-giant--cement.png" alt="Giant-Cement">
                         </a>
-                        <a href="#" class="p-3 mb-1">
-                            <img width="150px" src="img/logos/Keystone.svg" alt="Keystone">
+                        <a href="https://www.giantcement.com/keystone.html" class="p-3 mb-1">
+                            <img width="150px" src="img/logos/2-Keystonerec.png" alt="Keystone">
                         </a>
-                        <a href="#" class="p-3 mb-1">
-                            <img width="150px" src="img/logos/Dragon.svg" alt="Dragon">
+                        <a href="https://www.giantcement.com/dragon.html" class="p-3 mb-1">
+                            <img width="150px" src="img/logos/3-Dragonrec.png" alt="Dragon">
                         </a>
-                        <a href="#" class="p-3 mb-1">
-                            <img width="150px" src="img/logos/GRR.png" alt="GRR">
+                        <a href="https://www.giantresourcerecovery.com/" class="p-3 mb-1">
+                            <img width="150px" src="img/logos/4-Grrrerec.png" alt="GRR">
                         </a>
                     </div>
                 </div>
