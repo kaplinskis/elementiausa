@@ -109,11 +109,11 @@
 
         footer {
             padding: 0;
-            background-color: #0b4b86;
+            background-color: #17417d;
         }
 
         .bg-azul-oscuro {
-            background-color: #0b4b86;
+            background-color: #17417d;
         }
 
         .navbar.bg-azul-oscuro .menu a {
@@ -154,7 +154,7 @@
                         <img width="150px" src="img/logos/logo.png" alt="Allura">
                     </a></div>
                 <div class="menu">
-                    <a href="#">Contact us</a>
+                    <a href="#contacto_form">Contact us</a>
                 </div>
             </nav>
         </div>
@@ -165,7 +165,7 @@
             <div class="row">
                 <div class="col-md-7">
                     <div class="content">
-                        <img src="img/logos/logo-gris.png" alt="Allura">
+                        <img src="img/logos/logo-gris.png" alt="Allura" style="width:435px; height: 168px">
                         <p class="text-white mb-4">Elementia USA provides shared business consolidation services to U.S.-based subsidiaries of Elementia Materiales and Fortaleza Materiales.</p>
 
                     </div>
@@ -206,7 +206,7 @@
             <div class="row">
                 <h5 class="text-center fw-bold mb-4">Meet our group</h5>
                 <div class="col-md-6">
-                    <img src="img/sections/grupo1.png" alt="" usemap="#image-map">
+                    <img src="img/sections/grupo1.png" alt="" usemap="#image-map" style="width:538px; height:352px">
                     <map name="image-map">
                         <area target="_blank" alt="Fortaleza Materiales" href="https://www.fortalezamateriales.com/en.html" coords="413,6,118,103" shape="rect">
                         <area target="_blank" alt="GCHI" href="https://www.gchi.com" coords="413,128,121,201" shape="rect">
@@ -217,7 +217,7 @@
                     </map>
                 </div>
                 <div class="col-md-6">
-                    <img src="img/sections/grupo2.png" alt="" usemap="#image-map2">
+                    <img src="img/sections/grupo2.png" alt="" usemap="#image-map2" style="width:538px; height:352px">
                     <map name="image-map2">
                         <area shape="rect" href="https://www.elementiamateriales.com/en.html" alt="Elementia Materiales" coords="126,14,414,106" target="_blank" />
                         <area shape="rect" href="https://allurausa.com/" alt="Allura" coords="25,250,269,320" target="_blank" />
@@ -256,7 +256,7 @@
 
                 </div>
                 <div class="col-md-6 ">
-                    <a href="#" class="btn btn-amarillo btn-lg">Contact us</a>
+                    <a href="#contacto_form" class="btn btn-amarillo btn-lg">Contact us</a>
                 </div>
             </div>
         </div>
@@ -388,8 +388,8 @@
                 <img width="150px" src="img/logos/logo-azul.png" alt="Allura">
                 <nav class="navbar py-3 bg-azul-oscuro">
                     <div class="menu">
-                        <a href="#">Terms of Use</a>
-                        <a href="#">Privacy Policy</a>
+                        <a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Terms-of-Use.pdf" target="_blank">Terms of Use</a>
+                        <a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Privacy-Policy.pdf" target="_blank">Privacy Policy</a>
                         <a class="cursor-normal" href="javascript:void(0)">© Copyright <script>
                                 document.write(new Date().getFullYear())
                             </script>
