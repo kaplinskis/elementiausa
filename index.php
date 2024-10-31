@@ -142,6 +142,11 @@
             align-items: center;
             justify-content: flex-end;
         }
+
+        #logos img {
+            display: block;
+            margin: auto;
+        }
     </style>
     <title>Elementia USA</title>
 </head>
@@ -202,10 +207,10 @@
     </section>
 
     <section id="logos">
-        <div class="container col-xxl-10 px-5">
-            <div class="row">
+        <div class="container ">
+            <div class="row flex">
                 <h5 class="text-center fw-bold mb-4">Meet our group</h5>
-                <div class="col-md-6">
+                <div class="col">
                     <img src="img/sections/grupo1.png" alt="" usemap="#image-map" style="width:538px; height:352px">
                     <map name="image-map">
                         <area target="_blank" alt="Fortaleza Materiales" href="https://www.fortalezamateriales.com/en.html" coords="413,6,118,103" shape="rect">
@@ -216,7 +221,7 @@
                         <area target="_blank" alt="GRR" href="www.grr-gchi.us" coords="404,223,518,336" shape="rect">
                     </map>
                 </div>
-                <div class="col-md-6">
+                <div class="col">
                     <img src="img/sections/grupo2.png" alt="" usemap="#image-map2" style="width:538px; height:352px">
                     <map name="image-map2">
                         <area shape="rect" href="https://www.elementiamateriales.com/en.html" alt="Elementia Materiales" coords="126,14,414,106" target="_blank" />
@@ -334,8 +339,8 @@
                             <?php } ?>
                         </div>
                         <div class="col-md-6">
-                            
-                        <input value="<?php if (isset($company)) echo $company; ?>" type="text" class="form-control form-control-lg" name="company" placeholder="Company Name">
+
+                            <input value="<?php if (isset($company)) echo $company; ?>" type="text" class="form-control form-control-lg" name="company" placeholder="Company Name">
                             <?php
                             if (isset($error['company'])) { ?>
                                 <div class="invalid-feedback">
@@ -344,7 +349,7 @@
                             <?php } ?>
                         </div>
                         <div class="col-12">
-                           
+
                             <input value="<?php if (isset($phone)) echo $phone; ?>" type="text" class="form-control form-control-lg" name="phone" placeholder="Phone">
                             <?php
                             if (isset($error['phone'])) { ?>
