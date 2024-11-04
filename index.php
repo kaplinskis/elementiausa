@@ -413,8 +413,8 @@
                                 $mail->setFrom('it@investorcloud.net', 'no-reply'); // Cambia esto a tu dirección y nombre de remitente
                                 $mail->addAddress('it@kaplinski.ca', 'IT'); // Cambia esto a la dirección y nombre del destinatario
                                 $mail->addCC('sgutierrez@elementia.com', 'Sergio'); // Cambia esto a la dirección y nombre del destinatario
-                                $mail->addCC('cnofrieta@elementia.com', '');
-                                $mail->addCC('amcbride@elementia.com', '');
+                                $mail->addCC('cnofrieta@elementia.com', 'cnofrieta');
+                                $mail->addCC('amcbride@elementia.com', 'amcbride');
                                 $mail->Subject = 'Usuario anonimo desea contactar con elementia USA';
                                 $mail->Body    = $bodyhtml;
                                 $mail->AltBody    = $body_text;
