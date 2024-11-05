@@ -136,6 +136,10 @@
             width: 100px;
 
         }
+        .w-75px {
+            width: 75px;
+
+        }
 
         .flex-img.great {
             display: flex;
@@ -273,7 +277,7 @@
                 </div>
                 <div class="col-md-5 follow-div">
                     <a href="https://www.greatplacetowork.com/certified-company/7005415" target="_blank">
-                        <img class="w-100px" src="img/logos/great-work.png" alt="">
+                        <img class="w-75px" src="img/logos/great-work.png" alt="">
                     </a>
                     <a target="_blank" href="https://www.linkedin.com/company/elementia-usa-inc./">Follow us on <img width="40" src="img/logos/linkedin.png" alt="Allura"></a>
                 </div>
