@@ -191,7 +191,7 @@
         }
 
         .img-grupo1 {
-            width: 538px;
+            
             height: 352px
         }
 
