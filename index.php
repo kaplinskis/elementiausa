@@ -312,7 +312,7 @@
             <div class="row flex grupos">
                 <h2 class="text-center fw-bold  text-uppercase">Meet our group</h5>
                     <div class="col">
-                        <img class="img-grupo1" src="img/sections/grupo1.png?i=2" alt="" usemap="#image-map">
+                        <img class="img-grupo1" src="img/sections/grupo1.png?i=3" alt="" usemap="#image-map">
                         <map name="image-map">
                             <area target="_blank" alt="Fortaleza Materiales" href="https://www.fortalezamateriales.com/en.html" coords="413,6,118,103" shape="rect">
                             <area target="_blank" alt="GCHI" href="https://www.gchi.us" coords="413,128,121,201" shape="rect">
