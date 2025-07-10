@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/plyr.min.css" />
     <link rel="stylesheet" href="./css/custom.min.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <style>
         #hero {
             background-image: linear-gradient(90deg, rgba(0, 0, 0, .7) 0, rgba(255, 255, 255, 0) 90%), url(img/hero/bg_elementia.png);
@@ -381,56 +382,77 @@
                     <?php
                     include('smtp.php');
                     if (isset($_POST['submit'])) {
-                        $error = [];
+                       $error = [];
 
-                        $emailSanitized = filter_var(trim($_POST['email'], FILTER_SANITIZE_EMAIL));
 
-                        $name = htmlspecialchars(stripslashes(trim($_POST['first-name'])));
-                        $phone = htmlspecialchars(stripslashes(trim($_POST['phone'])));
-                        $company = htmlspecialchars(stripslashes(trim($_POST['company'])));
-                        $email = htmlspecialchars(stripslashes($emailSanitized));
-                        $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
-
-                        if (!preg_match("/^[A-Za-zñÑáéíóúÁÉÍÓÚ.-]+(?:[-\s][A-Za-zñÑáéíóúÁÉÍÓÚ.-]+)*$/", $name)) {
-                            $error['name'] = 'Invalid name';
-                        }
-                        if (!preg_match("/^\+?[0-9\s.-]{7,15}$/", $phone)) {
-                            $error['phone'] = 'Invalid phone number';
-                        }
-                        if (!preg_match("/[A-Za-zñÑáéíóúÁÉÍÓÚ.-]+(?:[-\s][A-Za-zñÑáéíóúÁÉÍÓÚ.-]+)*$/", $company)) {
-                            $error['company'] = 'Invalid company';
-                        }
-                        if (!preg_match("/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/", $email)) {
-                            $error['email'] = 'Invalid email';
-                        }
-                        if (strlen($message) === 0) {
-                            $error['message'] = 'Your message should not be empty';
+                       if (!empty($_POST['website'])) {
+                            exit;
                         }
 
-                        if (empty($error)) {
-                            try {
 
-                                $body_text = "Name: " . $name . "\r\n Phone: " . $phone . "\r\n Email: " . $email . "\r\n Company: " . $company . "\r\n Message: " . $message;
-                                $bodyhtml = "Name: " . $name . "<br>Phone: " . $phone . "<br> Email: " . $email . "<br> Company: " . $company . "<br> Message: " . $message;
-                                $mail->setFrom('it@investorcloud.net', 'no-reply'); // Cambia esto a tu dirección y nombre de remitente
-                                $mail->addAddress('it@kaplinski.ca', 'IT'); // Cambia esto a la dirección y nombre del destinatario
-                                $mail->addCC('sgutierrez@elementia.com', 'Sergio'); // Cambia esto a la dirección y nombre del destinatario
-                                $mail->addCC('cnofrieta@elementia.com', 'cnofrieta');
-                                $mail->addCC('amcbride@elementia.com', 'amcbride');
-                                $mail->Subject = 'Usuario anonimo desea contactar con elementia USA';
-                                $mail->Body    = $bodyhtml;
-                                $mail->AltBody    = $body_text;
-                                // Enviar el correo electrónico
-                                $mail->send();
-                                echo '<p style="color: green">Message sent</p>';
-                                $email = $company = $phone = $name = '';
-                            } catch (Exception $e) {
-                                echo "Error al enviar el correo: {$mail->ErrorInfo}";
+                       // reCAPTCHA validation
+                       $recaptcha_secret =  getenv('RECAPTCHA_SECRET_KEY');
+
+                       $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
+
+                       $verify = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$recaptcha_secret&response=$recaptcha_response");
+                       $captcha_success = json_decode($verify);
+
+                       if (!$captcha_success->success) {
+                            echo '<p style="color:red;">Captcha verification failed. Please try again.</p>';
+                       }
+                       else {
+
+                            $emailSanitized = filter_var(trim($_POST['email'], FILTER_SANITIZE_EMAIL));
+
+                            $name = htmlspecialchars(stripslashes(trim($_POST['first-name'])));
+                            $phone = htmlspecialchars(stripslashes(trim($_POST['phone'])));
+                            $company = htmlspecialchars(stripslashes(trim($_POST['company'])));
+                            $email = htmlspecialchars(stripslashes($emailSanitized));
+                            $message = htmlspecialchars(stripslashes(trim($_POST['message'])));
+
+                            if (!preg_match("/^[A-Za-zñÑáéíóúÁÉÍÓÚ.-]+(?:[-\s][A-Za-zñÑáéíóúÁÉÍÓÚ.-]+)*$/", $name)) {
+                                $error['name'] = 'Invalid name';
                             }
-                        }
+                            if (!preg_match("/^\+?[0-9\s.-]{7,15}$/", $phone)) {
+                                $error['phone'] = 'Invalid phone number';
+                            }
+                            if (!preg_match("/[A-Za-zñÑáéíóúÁÉÍÓÚ.-]+(?:[-\s][A-Za-zñÑáéíóúÁÉÍÓÚ.-]+)*$/", $company)) {
+                                $error['company'] = 'Invalid company';
+                            }
+                            if (!preg_match("/^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/", $email)) {
+                                $error['email'] = 'Invalid email';
+                            }
+                            if (strlen($message) === 0) {
+                                $error['message'] = 'Your message should not be empty';
+                            }
+
+                            if (empty($error)) {
+                                try {
+
+                                    $body_text = "Name: " . $name . "\r\n Phone: " . $phone . "\r\n Email: " . $email . "\r\n Company: " . $company . "\r\n Message: " . $message;
+                                    $bodyhtml = "Name: " . $name . "<br>Phone: " . $phone . "<br> Email: " . $email . "<br> Company: " . $company . "<br> Message: " . $message;
+                                    $mail->setFrom('it@investorcloud.net', 'no-reply'); // Cambia esto a tu dirección y nombre de remitente
+                                    $mail->addAddress('it@kaplinski.ca', 'IT'); // Cambia esto a la dirección y nombre del destinatario
+                                    $mail->addCC('sgutierrez@elementia.com', 'Sergio'); // Cambia esto a la dirección y nombre del destinatario
+                                    $mail->addCC('cnofrieta@elementia.com', 'cnofrieta');
+                                    $mail->addCC('amcbride@elementia.com', 'amcbride');
+                                    $mail->Subject = 'Usuario anonimo desea contactar con elementia USA';
+                                    $mail->Body    = $bodyhtml;
+                                    $mail->AltBody    = $body_text;
+                                    // Enviar el correo electrónico
+                                    $mail->send();
+                                    echo '<p style="color: green">Message sent</p>';
+                                    $email = $company = $phone = $name = '';
+                                } catch (Exception $e) {
+                                    echo "Error al enviar el correo: {$mail->ErrorInfo}";
+                                }
+                            }
+                      }
                     }
                     ?>
                     <form class="row g-4 needs-validation " method="post" id="contacto_form">
+                        <input type="text" name="website" style="display:none">
                         <div class="col-md-6">
                             <input value="<?php if (isset($name)) echo $name; ?>" class="form-control form-control-lg <?php if (isset($$error['name'])) echo 'invalid-field '; ?>" name="first-name" placeholder="First Name">
                             <?php
@@ -477,6 +499,9 @@
                                     Your message should not be empty
                                 </div>
                             <?php } ?>
+                        </div>
+                        <div class="col-12">
+                            <div class="g-recaptcha" data-sitekey="6Lfmy34rAAAAAANXgrkWJeLrjKyJrRgF9kAoJSoC"></div>
                         </div>
                         <div class="col-12 text-center">
                             <input class="btn btn-primary" type="submit" name="submit" value="Submit">
