@@ -84,7 +84,7 @@
 
         #ready-to-take .flex-blue {
             background-color: #0b4b86;
-            padding: 90px 30px;
+            padding: 40px 30px;
         }
 
         .btn-red,
@@ -398,12 +398,12 @@
 
     <section id="ready-to-take">
         <div class="row margin-0">
-            <div class="col-lg-6 col-md-12 flex-img great order-2 order-lg-1">
+            <div class="col-lg-7 col-md-12 flex-img great order-2 order-lg-1">
                 <!-- <a href="https://www.greatplacetowork.com/certified-company/7005415" target="_blank">
                     <img class="w-100px" src="img/logos/great-work.png" alt="">
                 </a> -->
             </div>
-            <div class="col-lg-6 col-md-12 flex-blue text-white d-flex justify-content-center align-items-center order-1 order-lg-2">
+            <div class="col-lg-5 col-md-12 flex-blue text-white d-flex justify-content-center align-items-center order-1 order-lg-2">
                 <div class="p-4">
                     <h4 class="fw-semibold text-uppercase text-center fs-1-1-rem">READY TO TAKE THE NEXT STEP IN YOUR CAREER IN ONE OF OUR COMPANIES?</h4>
                     <p class="mb-4 text-center">We are currently seeking talented individuals to join our dynamic team.</p>
