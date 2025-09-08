@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/plyr.min.css" />
     <link rel="stylesheet" href="./css/custom.min.css">
@@ -188,36 +188,76 @@
 
         .logo-gris {
             width: 435px;
-            height: 168px
+            height: 168px;
+            max-width: 100%;
+            height: auto;
         }
 
         .img-grupo1 {
-            
-            height: 352px
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            object-position: center;
         }
 
         .img-grupo2 {
-            width: 538px;
-            height: 352px
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            object-position: center;
         }
         .menu2{
                 display: none;
             }
 
+        /* Breakpoints responsivos mejorados */
+        @media (max-width: 1200px) {
+            .align-txt {
+                padding-left: 40px;
+            }
+            
+            .img-grupo1,
+            .img-grupo2 {
+                max-height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .img-grupo1,
+            .img-grupo2 {
+                max-height: 280px;
+            }
+        }
+
         @media (max-width: 992px) {
+            #ready-to-take .flex-img {
+                min-height: 120px;
+             }
             .vertical-divider {
                 display: none;
                 /* Oculta la línea en pantallas pequeñas */
             }
-        }
-
-        @media (max-width: 700px) {
-
-            .img-grupo1,
-            .img-grupo2,
+            
+            .align-txt {
+                padding-left: 0;
+                text-align: center;
+            }
+            
             .logo-gris {
                 width: 100%;
+                max-width: 300px;
                 height: auto;
+            }
+            
+            .img-grupo1,
+            .img-grupo2 {
+                width: 100%;
+                height: auto;
+                max-height: 300px;
+                object-fit: contain;
+                object-position: center;
             }
 
             .grupos {
@@ -230,6 +270,8 @@
 
             .follow-div {
                 display: block;
+                text-align: center;
+                margin-top: 20px;
             }
 
             .follow-div a {
@@ -237,15 +279,33 @@
                 text-decoration: none;
                 display: block;
                 text-align: center;
+                margin-bottom: 10px;
             }
+            
             .menu2{
                 display: block;
             }
+            
             footer .menu2 a{
                 color: white;
                 text-decoration: none;
             }
+            
+            #ready-to-take .flex-blue {
+                padding: 40px 15px;
+            }
+            
+            #ready-to-take h4 {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 15px 25px;
+                font-size: 13px;
+            }
         }
+
+
     </style>
     <title>Elementia USA</title>
 </head>
@@ -266,93 +326,91 @@
     </header>
     <section id="hero">
         <div class="container col-xxl-10 px-5">
-            <div class="row">
-                <div class="col-md-7">
+            <div class="row align-items-center">
+                <div class="col-lg-7 col-md-6">
                     <div class="content">
-                        <img class="logo-gris" src="img/logos/logo-gris.png" alt="Allura" style="">
+                        <img class="logo-gris mb-3" src="img/logos/logo-gris.png" alt="Elementia USA">
                         <p class="text-white mb-4 align-txt">Elementia USA provides shared business consolidation services to U.S.-based subsidiaries of Elementia Materiales and Fortaleza Materiales.</p>
-
                     </div>
                 </div>
-                <div class="col-md-5 follow-div">
-                    <a href="https://www.greatplacetowork.com/certified-company/7005415" target="_blank">
-                        <img class="w-75px" src="img/logos/great-work.png" alt="">
+                <div class="col-lg-5 col-md-6 follow-div">
+                  <!---  <a href="https://www.greatplacetowork.com/certified-company/7005415" target="_blank" class="d-block mb-3">
+                        <img class="w-75px" src="img/logos/great-work.png" alt="Great Place to Work">
+                    </a>-->
+                    <a target="_blank" href="https://www.linkedin.com/company/elementia-usa-inc./" class="d-block">
+                        Follow us on <img width="40" src="img/logos/linkedin.png" alt="LinkedIn">
                     </a>
-                    <a target="_blank" href="https://www.linkedin.com/company/elementia-usa-inc./">Follow us on <img width="40" src="img/logos/linkedin.png" alt="Allura"></a>
                 </div>
             </div>
-
         </div>
     </section>
 
     <section id="about-us">
         <div class="container col-xxl-10 px-5">
-            <div class="row">
-                <div class="col-md-4 text-center">
-                    <img class="mx-auto mb-3" src="./img/about-us/Who-We-Are.svg" alt="Who We Are">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <img class="mx-auto mb-3" src="./img/about-us/Who-We-Are.svg" alt="Who We Are" style="max-width: 80px; height: auto;">
                     <h6 class="fw-bold">What we do</h6>
                     <p class="p-3">Our sister companies manufacture and market high-quality building materials, including cement, fiber cement solutions, and metal products to meet the demands of modern construction and infrastructure. Additionally, we lead in sustainable environmental solutions by transforming industrial waste into energy through advanced technology and processes.</p>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img class="mx-auto mb-3" src="./img/about-us/Our-Philosophy.svg" alt="Our Philosophy">
+                <div class="col-lg-4 col-md-6 text-center">
+                    <img class="mx-auto mb-3" src="./img/about-us/Our-Philosophy.svg" alt="Our Philosophy" style="max-width: 80px; height: auto;">
                     <h6 class="fw-bold">How we do it</h6>
                     <p class="p-3">Driven by a commitment to quality, sustainability, and innovation, we strive to make a difference in our industries by creating value for our clients, communities, and stakeholders.</p>
                 </div>
-                <div class="col-md-4 text-center">
-                    <img class="mx-auto mb-3" src="./img/about-us/Our-Mission.svg" alt="Our Mission">
+                <div class="col-lg-4 col-md-12 text-center">
+                    <img class="mx-auto mb-3" src="./img/about-us/Our-Mission.svg" alt="Our Mission" style="max-width: 80px; height: auto;">
                     <h6 class="fw-bold">Our Presence</h6>
                     <p class="p-3">Our U.S. headquarters are based in Houston, Texas, with additional locations across several states throughout the continental United States. We proudly conduct business in the majority of U.S. territories, extending our reach to serve clients and communities nationwide.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section id="logos">
-        <div class="container ">
-            <div class="row flex grupos">
-                <h2 class="text-center fw-bold  text-uppercase">Meet our group</h5>
-                    <div class="col">
-                        <img class="img-grupo1" src="img/sections/grupo1.png?i=3" alt="" usemap="#image-map">
-                        <map name="image-map">
-                            <area target="_blank" alt="Fortaleza Materiales" href="https://www.fortalezamateriales.com/en.html" coords="413,6,118,103" shape="rect">
-                            <area target="_blank" alt="GCHI" href="https://www.gchi.us" coords="413,128,121,201" shape="rect">
-                            <area target="_blank" alt="Giant cement" href="https://www.giantcement.us/" coords="16,223,128,337" shape="rect">
-                            <area target="_blank" alt="Keystone Cement" href="https://www.keystonecement.us/" coords="145,224,257,338" shape="rect">
-                            <area target="_blank" alt="Dragon cement" href="https://www.dragoncement.us/" coords="273,222,387,335" shape="rect">
-                            <area target="_blank" alt="GRR" href="https://www.grr-gchi.us/" coords="404,223,518,336" shape="rect">
-                        </map>
-                    </div>
-                    <div class="vertical-divider"></div>
-                    <div class="col">
-                        <img class="img-grupo2" src="img/sections/grupo2.png" alt="" usemap="#image-map2">
-                        <map name="image-map2">
-                            <area shape="rect" href="https://www.elementiamateriales.com/en.html" alt="Elementia Materiales" coords="126,14,414,106" target="_blank" />
-                            <area shape="rect" href="https://allurausa.com/" alt="Allura" coords="25,250,269,320" target="_blank" />
-                            <area shape="rect" href="https://www.nacobreusa.com/" alt="Nacobre" coords="293,247,531,318" target="_blank" />
-                        </map>
-                    </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center fw-bold text-uppercase mb-5">Meet our group</h2>
+                </div>
             </div>
-
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12 mb-4 mb-lg-0">
+                    <div class="position-relative">
+                        <img class="img-grupo1 w-100" src="img/sections/keystone-g1.png" alt="Keystone Group" usemap="#image-map">
+                        <map name="image-map">
+                             <area target="_blank" alt="fortalezamateriales" title="fortalezamateriales" href="https://www.fortalezamateriales.com/en.html" coords="678,262,35,39" shape="rect">
+                                <area target="_blank" alt="keystonecement" title="keystonecement" href="https://www.keystonecement.us/" coords="628,673,91,502" shape="rect">
+                        </map>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="position-relative">
+                        <img class="img-grupo2 w-100" src="img/sections/allura-g2.png" alt="Allura Group" usemap="#image-map2">
+                        <map name="image-map2">
+                            <area target="_blank" alt="elementiamateriales" title="elementiamateriales" href="https://www.elementiamateriales.com/en.html" coords="657,259,54,52" shape="rect">
+                              <area target="_blank" alt="allurausa" title="allurausa" href="https://allurausa.com/" coords="102,485,609,638" shape="rect"> </map>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="ready-to-take">
-        <div class="row d-flex justify-content-between margin-0">
-            <div class="col-md-6 flex-img great">
-                <a href="https://www.greatplacetowork.com/certified-company/7005415" target="_blank">
+        <div class="row margin-0">
+            <div class="col-lg-6 col-md-12 flex-img great order-2 order-lg-1">
+                <!-- <a href="https://www.greatplacetowork.com/certified-company/7005415" target="_blank">
                     <img class="w-100px" src="img/logos/great-work.png" alt="">
-                </a>
+                </a> -->
             </div>
-            <div class="col-md-6 flex-blue text-white d-flex justify-content-center">
-                <div>
+            <div class="col-lg-6 col-md-12 flex-blue text-white d-flex justify-content-center align-items-center order-1 order-lg-2">
+                <div class="p-4">
                     <h4 class="fw-semibold text-uppercase text-center fs-1-1-rem">READY TO TAKE THE NEXT STEP IN YOUR CAREER IN ONE OF OUR COMPANIES?</h4>
                     <p class="mb-4 text-center">We are currently seeking talented individuals to join our dynamic team.</p>
                     <div class="text-center">
-                        <a href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=04fcfc06-f798-4da9-a459-049fe296684b&ccId=19000101_000001&lang=en_US" target="_blank" class="btn btn-red btn-lg">GCHI Careers</a>
+                        <!-- <a href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=04fcfc06-f798-4da9-a459-049fe296684b&ccId=19000101_000001&lang=en_US" target="_blank" class="btn btn-red btn-lg">GCHI Careers</a>-->
                         <a href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b5c5eb16-839b-46ec-a528-c40f4df252d0&ccId=9200448970359_2&lang=en_US" target="_blank" class="btn btn-azul-claro btn-lg">Allura Careers</a>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -378,7 +436,7 @@
                     <h2 class="fw-semibold text-center">Contact Us</h6>
                         <p class="text-center fw-bold mb-5">Get in touch by filling out the form below.</p>
                 </div>
-                <div class="col-md-10 offset-md-1">
+                <div class="col-lg-10 col-md-12 offset-lg-1">
                     <?php
                     include('smtp.php');
                     if (isset($_POST['submit'])) {
@@ -516,27 +574,29 @@
 
     <footer>
         <div class="container col-xxl-10 px-5">
-            <div class="d-flex justify-content-between">
-                <img width="150px" src="img/logos/logo-azul.png" alt="Allura">
-                <nav class="navbar py-3 bg-azul-oscuro foter">
-                    <div class="menu">
-                        <a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Terms-of-Use.pdf" target="_blank">Terms of Use</a>
-                        <a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Privacy-Policy.pdf" target="_blank">Privacy Policy</a>
-                        <a class="cursor-normal" href="javascript:void(0)">© Copyright <script>
+            <div class="row align-items-center">
+                <div class="col-lg-4 col-md-6 text-center text-lg-start mb-3 mb-lg-0">
+                    <img width="150px" src="img/logos/logo-azul.png" alt="Elementia USA" class="img-fluid">
+                </div>
+                <div class="col-lg-8 col-md-6">
+                    <nav class="navbar py-3 bg-azul-oscuro foter">
+                        <div class="menu">
+                            <a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Terms-of-Use.pdf" target="_blank">Terms of Use</a>
+                            <a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Privacy-Policy.pdf" target="_blank">Privacy Policy</a>
+                            <a class="cursor-normal" href="javascript:void(0)">© Copyright <script>
+                                    document.write(new Date().getFullYear())
+                                </script>
+                            </a>
+                        </div>
+                    </nav>
+                    <div class="menu2 text-center">
+                        <p><a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Terms-of-Use.pdf" target="_blank">Terms of Use</a></p>
+                        <p><a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Privacy-Policy.pdf" target="_blank">Privacy Policy</a></p>
+                        <p><a class="cursor-normal" href="javascript:void(0)">© Copyright <script>
                                 document.write(new Date().getFullYear())
                             </script>
-                        </a>
-
+                        </a></p>
                     </div>
-                </nav>
-                <div class="menu2">
-                    <p><a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Terms-of-Use.pdf" target="_blank">Terms of Use</a></p>
-                    <p> <a href="https://investorcloud.s3.us-east-1.amazonaws.com/elementia_usa/Privacy-Policy.pdf" target="_blank">Privacy Policy</a></p>
-                    <p><a class="cursor-normal" href="javascript:void(0)">© Copyright <script>
-                            document.write(new Date().getFullYear())
-                        </script>
-                    </a></p>
-
                 </div>
             </div>
         </div>
@@ -545,6 +605,12 @@
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/plyr.min.js"></script>
     <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="https://unpkg.com/image-map-resizer@1.0.10/js/imageMapResizer.min.js"></script>
+      <script>
+        window.onload = () => {
+          imageMapResize();
+        };
+      </script>
     <script src="./js/custom.min.js"></script>
 
     <?php
