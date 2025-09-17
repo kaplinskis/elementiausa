@@ -84,7 +84,7 @@
 
         #ready-to-take .flex-blue {
             background-color: #0b4b86;
-            padding: 40px 30px;
+            padding: 35px 30px;
         }
 
         .btn-red,
@@ -152,10 +152,30 @@
         }
 
         #ready-to-take .flex-img {
-            background-image: url("img/sections/Careerpic.png");
-            background-size: cover;
-            background-position: center;
-            background-size: 100% 100%;
+            background: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0px;
+        }
+        
+        .three-images-container {
+            display: flex;
+            gap: 15px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .three-images-container img {
+            width: 270px;
+            height: 270px;
+            min-width: 150px;
+            min-height: 150px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            flex-shrink: 0;
         }
 
         .align-txt {
@@ -235,6 +255,22 @@
             #ready-to-take .flex-img {
                 min-height: 120px;
              }
+             
+             .three-images-container {
+                 flex-direction: row;
+                 gap: 10px;
+                 justify-content: space-around;
+             }
+             
+             /*.three-images-container img {
+                 width: 120px;
+                 height: 120px;
+                 min-width: 100px;
+                 min-height: 100px;
+                 max-width: 120px;
+                 max-height: 120px;
+             }*/
+             
             .vertical-divider {
                 display: none;
                 /* Oculta la línea en pantallas pequeñas */
@@ -297,6 +333,17 @@
             
             #ready-to-take h4 {
                 font-size: 1rem;
+            }
+            
+            .three-images-container {
+                flex-direction: row;
+                gap: 5px;
+                justify-content: center;
+            }
+            
+            .three-images-container img {
+                width: 32%;
+                height: 100%;
             }
             
             .btn {
@@ -399,9 +446,12 @@
     <section id="ready-to-take">
         <div class="row margin-0">
             <div class="col-lg-7 col-md-12 flex-img great order-2 order-lg-1">
-                <!-- <a href="https://www.greatplacetowork.com/certified-company/7005415" target="_blank">
-                    <img class="w-100px" src="img/logos/great-work.png" alt="">
-                </a> -->
+                <div class="three-images-container">
+                    <img src="img/sections/hombre1.jpg" alt="">
+                    <img src="img/sections/mujer1.jpg" alt="">
+                    <img src="img/sections/hombre2.jpg" alt="">
+                    
+                </div>
             </div>
             <div class="col-lg-5 col-md-12 flex-blue text-white d-flex justify-content-center align-items-center order-1 order-lg-2">
                 <div class="p-4">
