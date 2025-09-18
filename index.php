@@ -182,6 +182,169 @@
             padding-left: 80px;
         }
 
+        /* Estilos para la sección Great Place to Work */
+        #great-place-to-work {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .gptw-column {
+            padding: 20px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gptw-data-section {
+            background-color: #e3f2fd;
+            padding: 25px;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .gptw-title {
+            color: #1565c0;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .gptw-badge-small {
+            width: 60px;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .gptw-company-name {
+            color: #1565c0;
+            font-weight: bold;
+            font-size: 1rem;
+            margin-bottom: 20px;
+        }
+
+        .gptw-bar-chart {
+            margin-bottom: 15px;
+        }
+
+        .gptw-bar {
+            background-color: #bbdefb;
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gptw-bar-fill {
+            background-color: #1976d2;
+            height: 100%;
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+
+        .gptw-bar-fill.dark {
+            background-color: #0d47a1;
+        }
+
+        .gptw-bar-label {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .gptw-bar-percentage {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #333;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .gptw-main-title {
+            color: #333;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+
+        .gptw-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #ff4081;
+            border-radius: 3px;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: top;
+            margin-top: 5px;
+        }
+
+        .gptw-text {
+            color: #666;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .gptw-badge-large {
+            width: 100%;
+            max-width: 200px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .gptw-company-logos {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .gptw-logo-btn {
+            padding: 12px 25px;
+            border-radius: 25px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            min-width: 150px;
+            transition: transform 0.2s ease;
+        }
+
+        .gptw-logo-btn:hover {
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+
+        .gptw-logo-btn.allura {
+            background-color: #1976d2;
+        }
+
+        .gptw-logo-btn.keystone {
+            background-color: #d32f2f;
+        }
+
+        .gptw-logo-btn .company-name {
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .gptw-logo-btn .company-desc {
+            font-size: 0.8rem;
+            opacity: 0.9;
+            display: block;
+        }
+
         #contact h2 {
             font-size: 25px;
             color: #4f87bb;
@@ -350,6 +513,26 @@
                 padding: 15px 25px;
                 font-size: 13px;
             }
+            
+            /* Responsive para Great Place to Work */
+            .gptw-main-title {
+                font-size: 1.4rem;
+            }
+            
+            .gptw-text {
+                font-size: 0.9rem;
+            }
+            
+            .gptw-company-logos {
+                flex-direction: row;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .gptw-logo-btn {
+                min-width: 120px;
+                padding: 10px 20px;
+            }
         }
 
 
@@ -426,17 +609,18 @@
                     <div class="position-relative">
                         <img class="img-grupo1 w-100" src="img/sections/keystone-g1.png" alt="Keystone Group" usemap="#image-map">
                         <map name="image-map">
-                             <area target="_blank" alt="fortalezamateriales" title="fortalezamateriales" href="https://www.fortalezamateriales.com/en.html" coords="678,262,35,39" shape="rect">
-                                <area target="_blank" alt="keystonecement" title="keystonecement" href="https://www.keystonecement.us/" coords="628,673,91,502" shape="rect">
-                        </map>
+                            <area target="_blank" alt="fortaleza" title="fortaleza" href="https://www.fortalezamateriales.com/en.html" coords="31,6,402,134" shape="rect">
+                            <area target="_blank" alt="" title="" href="https://www.keystonecement.us/" coords="63,278,371,370" shape="rect">
+                         </map>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
                     <div class="position-relative">
                         <img class="img-grupo2 w-100" src="img/sections/allura-g2.png" alt="Allura Group" usemap="#image-map2">
                         <map name="image-map2">
-                            <area target="_blank" alt="elementiamateriales" title="elementiamateriales" href="https://www.elementiamateriales.com/en.html" coords="657,259,54,52" shape="rect">
-                              <area target="_blank" alt="allurausa" title="allurausa" href="https://allurausa.com/" coords="102,485,609,638" shape="rect"> </map>
+                            <area target="_blank" alt="elementiamateriales" title="elementiamateriales" href="https://www.elementiamateriales.com/en.html" coords="32,10,406,134" shape="rect">
+                            <area target="_blank" alt="allurausa" title="allurausa" href="https://allurausa.com/" coords="63,278,370,365" shape="rect">
+                        </map>
                     </div>
                 </div>
             </div>
@@ -464,6 +648,73 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <section id="great-place-to-work">
+            <div class="row">
+                <!-- Columna 1: Great Place to Work Certified con datos -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="gptw-column">
+                        <div class="gptw-data-section">
+                            <h3 class="gptw-title">We're Great Place to Work-Certified</h3>
+                            <img src="img/logos/great-work.png" alt="Great Place to Work Certified" class="gptw-badge-small">
+                            <div class="gptw-company-name">ELEMENTIA MATERIALES</div>
+                            
+                            <div class="gptw-bar-chart">
+                                <div class="gptw-bar">
+                                    <div class="gptw-bar-fill" style="width: 76%"></div>
+                                    <span class="gptw-bar-label">EL MEJOR LUGAR PARA TRABAJAR</span>
+                                    <span class="gptw-bar-percentage">76%</span>
+                                </div>
+                                <div class="gptw-bar">
+                                    <div class="gptw-bar-fill dark" style="width: 57%"></div>
+                                    <span class="gptw-bar-label">Toda la empresa</span>
+                                    <span class="gptw-bar-percentage">57%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Texto principal -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="gptw-column">
+                        <h2 class="gptw-main-title">
+                            <span class="gptw-icon"></span>Our Culture and our people make us Strong
+                        </h2>
+                        <p class="gptw-text">
+                           For the third consecutive year, we’ve been proudly certified as a Great Place to Work.
+                           This achievement reflects our vibrant culture, our unwavering commitment, and—above all—the passion of every individual in our incredible family.
+
+                        </p>
+                        <p class="gptw-text">
+                            Together, we continue to build a workplace where people thrive, grow, and feel truly valued.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Columna 3: Badge grande de certificación -->
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <div class="gptw-column d-flex align-items-center justify-content-center">
+                        <img src="img/logos/great-work.png" alt="Great Place to Work Certified" class="gptw-badge-large">
+                    </div>
+                </div>
+
+                <!-- Columna 4: Logos de empresas -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="gptw-column d-flex align-items-center justify-content-center">
+                        <div class="gptw-company-logos">
+                            <a href="https://allurausa.com/" target="_blank" class="gptw-logo-btn allura">
+                                <span class="company-name">ALLURA</span>
+                            </a>
+                            <a href="https://www.keystonecement.us/" target="_blank" class="gptw-logo-btn keystone">
+                                <span class="company-name">KEYSTONE</span>
+                                <span class="company-desc">CEMENT COMPANY</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </section>
 
     <section id="what-we-do">
