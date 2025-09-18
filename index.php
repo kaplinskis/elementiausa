@@ -163,6 +163,7 @@
             display: flex;
             gap: 15px;
             width: 100%;
+            max-width: 100%;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
@@ -173,6 +174,7 @@
             height: 270px;
             min-width: 150px;
             min-height: 150px;
+            max-width: 100%;
             object-fit: cover;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             flex-shrink: 0;
@@ -610,6 +612,14 @@
             }
         }
 
+        /* Prevenir desbordamiento horizontal */
+        body {
+            overflow-x: hidden;
+        }
+
+        .container-fluid {
+            max-width: 100%;
+        }
 
     </style>
     <title>Elementia USA</title>
@@ -703,7 +713,8 @@
     </section>
 
     <section id="ready-to-take">
-        <div class="row margin-0">
+        <div class="container-fluid px-0">
+            <div class="row margin-0">
             <div class="col-lg-7 col-md-12 flex-img great order-2 order-lg-1">
                 <div class="three-images-container">
                     <img src="img/sections/hombre1.jpg" alt="">
