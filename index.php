@@ -216,10 +216,25 @@
         }
 
         .gptw-company-name {
-            color: #1565c0;
+            color: #333;
             font-weight: bold;
-            font-size: 1rem;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .gptw-description {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .gptw-source {
+            margin-top: 15px;
+            color: #999;
+        }
+
+        .gptw-source small {
+            font-size: 0.75rem;
         }
 
         .gptw-bar-chart {
@@ -227,43 +242,47 @@
         }
 
         .gptw-bar {
-            background-color: #bbdefb;
-            height: 20px;
-            border-radius: 10px;
-            margin-bottom: 8px;
+            background-color: #e3f2fd;
+            height: 25px;
+            border-radius: 12px;
+            margin-bottom: 12px;
             position: relative;
             overflow: hidden;
+            border: 1px solid #bbdefb;
         }
 
         .gptw-bar-fill {
-            background-color: #1976d2;
+            background: linear-gradient(90deg, #1976d2 0%, #42a5f5 100%);
             height: 100%;
-            border-radius: 10px;
+            border-radius: 12px;
             transition: width 0.3s ease;
+            position: relative;
         }
 
         .gptw-bar-fill.dark {
-            background-color: #0d47a1;
+            background: linear-gradient(90deg, #0d47a1 0%, #1976d2 100%);
         }
 
         .gptw-bar-label {
             position: absolute;
-            left: 10px;
+            left: 12px;
             top: 50%;
             transform: translateY(-50%);
             color: #333;
-            font-size: 0.85rem;
-            font-weight: 500;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 2;
         }
 
         .gptw-bar-percentage {
             position: absolute;
-            right: 10px;
+            right: 12px;
             top: 50%;
             transform: translateY(-50%);
             color: #333;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            z-index: 2;
         }
 
         .gptw-main-title {
@@ -412,6 +431,37 @@
             .img-grupo2 {
                 max-height: 280px;
             }
+            
+            /* Responsive para Great Place to Work en móviles */
+            .gptw-title {
+                font-size: 0.9rem;
+            }
+            
+            .gptw-company-name {
+                font-size: 0.9rem;
+            }
+            
+            .gptw-description {
+                font-size: 0.75rem;
+            }
+            
+            .gptw-bar {
+                height: 18px;
+            }
+            
+            .gptw-bar-label {
+                font-size: 0.75rem;
+                left: 8px;
+            }
+            
+            .gptw-bar-percentage {
+                font-size: 0.8rem;
+                right: 8px;
+            }
+            
+            .gptw-source small {
+                font-size: 0.7rem;
+            }
         }
 
         @media (max-width: 992px) {
@@ -533,6 +583,31 @@
                 min-width: 120px;
                 padding: 10px 20px;
             }
+            
+            /* Responsive para Great Place to Work */
+            .gptw-title {
+                font-size: 1rem;
+            }
+            
+            .gptw-company-name {
+                font-size: 1rem;
+            }
+            
+            .gptw-description {
+                font-size: 0.8rem;
+            }
+            
+            .gptw-bar {
+                height: 20px;
+            }
+            
+            .gptw-bar-label {
+                font-size: 0.8rem;
+            }
+            
+            .gptw-bar-percentage {
+                font-size: 0.9rem;
+            }
         }
 
 
@@ -653,24 +728,34 @@
     <section id="great-place-to-work">
             <div class="row">
                 <!-- Columna 1: Great Place to Work Certified con datos -->
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="gptw-column">
                         <div class="gptw-data-section">
-                            <h3 class="gptw-title">We're Great Place to Work-Certified</h3>
-                            <img src="img/logos/great-work.png" alt="Great Place to Work Certified" class="gptw-badge-small">
-                            <div class="gptw-company-name">ELEMENTIA MATERIALES</div>
+                            <h3 class="gptw-title">We're Great Place to Work-Certified™!</h3>
+                            
+                            <div class="d-flex align-items-start mb-3">
+                                <img src="img/logos/great-work.png" alt="Great Place to Work Certified" class="gptw-badge-small me-3">
+                                <div>
+                                    <div class="gptw-company-name">ELEMENTIA MATERIALES</div>
+                                    <p class="gptw-description mb-0">75% of employees at ELEMENTIA MATERIALES say it is a great place to work compared to 57% of employees at a typical U.S.-based company*</p>
+                                </div>
+                            </div>
                             
                             <div class="gptw-bar-chart">
                                 <div class="gptw-bar">
-                                    <div class="gptw-bar-fill" style="width: 76%"></div>
-                                    <span class="gptw-bar-label">EL MEJOR LUGAR PARA TRABAJAR</span>
-                                    <span class="gptw-bar-percentage">76%</span>
+                                    <div class="gptw-bar-fill" style="width: 75%"></div>
+                                    <span class="gptw-bar-label">ELEMENTIA MATERIALES</span>
+                                    <span class="gptw-bar-percentage">75%</span>
                                 </div>
                                 <div class="gptw-bar">
                                     <div class="gptw-bar-fill dark" style="width: 57%"></div>
-                                    <span class="gptw-bar-label">Toda la empresa</span>
+                                    <span class="gptw-bar-label">Typical Company</span>
                                     <span class="gptw-bar-percentage">57%</span>
                                 </div>
+                            </div>
+                            
+                            <div class="gptw-source">
+                                <small>Source: Great Place To Work® 2021 U.S. National Employee Engagement Study*</small>
                             </div>
                         </div>
                     </div>
@@ -701,7 +786,7 @@
                 </div>
 
                 <!-- Columna 4: Logos de empresas -->
-                <div class="col-lg-3 col-md-6 mb-4">
+                <div class="col-lg-2 col-md-6 mb-4">
                     <div class="gptw-column d-flex align-items-center justify-content-center">
                         <div class="gptw-company-logos">
                             <a href="https://allurausa.com/" target="_blank" class="gptw-logo-btn allura">
