@@ -314,7 +314,7 @@
         }
 
         .gptw-badge-large {
-            width: 100%;
+            width: 80%;
             max-width: 200px;
             height: auto;
             margin: 0 auto;
