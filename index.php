@@ -270,7 +270,7 @@
             left: 12px;
             top: 50%;
             transform: translateY(-50%);
-            color: #333;
+            color: white;
             font-size: 0.9rem;
             font-weight: 600;
             z-index: 2;
