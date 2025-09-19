@@ -337,8 +337,10 @@
             text-decoration: none;
             font-weight: bold;
             text-align: center;
-            min-width: 150px;
+            min-width: 200px;
+            width: 200px;
             transition: transform 0.2s ease;
+            display: inline-block;
         }
 
         .gptw-logo-btn:hover {
@@ -429,6 +431,9 @@
         }
 
         @media (max-width: 768px) {
+            .ks-careers{
+                margin-bottom: 10px;
+            }
             .img-grupo1,
             .img-grupo2 {
                 max-height: 280px;
@@ -463,6 +468,14 @@
             
             .gptw-source small {
                 font-size: 0.7rem;
+            }
+            
+            /* Botones con dimensiones iguales en móviles */
+            .gptw-logo-btn {
+                min-width: 270px;
+                width: 120px;
+                padding: 8px 15px;
+                font-size: 0.8rem;
             }
         }
 
@@ -576,13 +589,14 @@
             }
             
             .gptw-company-logos {
-                flex-direction: row;
+                flex-direction: column;
                 justify-content: center;
                 flex-wrap: wrap;
             }
             
             .gptw-logo-btn {
-                min-width: 120px;
+                min-width: 280px;
+                width: 150px;
                 padding: 10px 20px;
             }
             
@@ -728,7 +742,7 @@
                     <h4 class="fw-semibold text-uppercase text-center fs-1-1-rem">READY TO TAKE THE NEXT STEP IN YOUR CAREER IN ONE OF OUR COMPANIES?</h4>
                     <p class="mb-4 text-center">We are currently seeking talented individuals to join our dynamic team.</p>
                     <div class="text-center">
-                        <a href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=20bed66c-821a-479c-aab7-531b6941a26e&ccId=9200775418314_2&lang=en_US" target="_blank" class="btn btn-red btn-lg">Keystone Careers</a>
+                        <a href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=20bed66c-821a-479c-aab7-531b6941a26e&ccId=9200775418314_2&lang=en_US" target="_blank" class="btn btn-red btn-lg ">Keystone Careers</a>
                         <a href="https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=b5c5eb16-839b-46ec-a528-c40f4df252d0&ccId=9200448970359_2&lang=en_US" target="_blank" class="btn btn-azul-claro btn-lg">Allura Careers</a>
                     </div>
                 </div>
@@ -800,12 +814,11 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <div class="gptw-column d-flex align-items-center justify-content-center">
                         <div class="gptw-company-logos">
-                            <a href="https://www.greatplacetowork.com/certified-company/127000229" target="_blank" class="gptw-logo-btn allura">
-                                <span class="company-name">ALLURA</span>
+                            <a href="https://www.greatplacetowork.com/certified-company/127000229" target="_blank" class="btn btn-azul-claro btn-lg gptw-logo-btn">
+                                <span class="company-name">Allura</span>
                             </a>
-                            <a href="https://www.greatplacetowork.com/certified-company/127000233" target="_blank" class="gptw-logo-btn keystone">
-                                <span class="company-name">KEYSTONE</span>
-                                <span class="company-desc">CEMENT COMPANY</span>
+                            <a href="https://www.greatplacetowork.com/certified-company/127000233" target="_blank" class="btn btn-red btn-lg gptw-logo-btn">
+                                <span class="company-name">Keystone Cement Company</span>
                             </a>
                         </div>
                     </div>
