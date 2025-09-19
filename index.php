@@ -800,10 +800,10 @@
                 <div class="col-lg-2 col-md-6 mb-4">
                     <div class="gptw-column d-flex align-items-center justify-content-center">
                         <div class="gptw-company-logos">
-                            <a href="https://allurausa.com/" target="_blank" class="gptw-logo-btn allura">
+                            <a href="https://www.greatplacetowork.com/certified-company/127000229" target="_blank" class="gptw-logo-btn allura">
                                 <span class="company-name">ALLURA</span>
                             </a>
-                            <a href="https://www.keystonecement.us/" target="_blank" class="gptw-logo-btn keystone">
+                            <a href="https://www.greatplacetowork.com/certified-company/127000233" target="_blank" class="gptw-logo-btn keystone">
                                 <span class="company-name">KEYSTONE</span>
                                 <span class="company-desc">CEMENT COMPANY</span>
                             </a>
